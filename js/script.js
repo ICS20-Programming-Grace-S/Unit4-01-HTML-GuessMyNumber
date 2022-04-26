@@ -5,7 +5,7 @@
 "use strict"
 
 /**
- * This function displays a greeting based on the hour of the day
+ * This function displays a response based on the guessed number
  */
 function displayNumber () {
   // initialize variables
@@ -14,15 +14,12 @@ function displayNumber () {
 	// get user input
 	let guess = parseInt(document.getElementById('guess').value)
 
-
-  // determine the greeting based on the hour of the day in 24-hour format
+  // determine the response based on the guessed number
 	if (guess == Math.floor((Math.random() * 6) + 1)) {
 		answer = "Correct!"
 	} else {
     answer = "Wrong!"
   }
-  
-
 
   // display the results
   document.getElementById('answer').innerHTML = answer
