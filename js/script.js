@@ -9,18 +9,22 @@
  */
 function displayNumber () {
   // initialize variables
-	let answer = ""
+  let number = ""
 	
 	// get user input
 	let guess = parseInt(document.getElementById('guess').value)
+  let randomNumber = Math.floor(Math.random() * 6) + 1
+
 
   // determine the response based on the guessed number
-	if (guess == Math.floor((Math.random() * 6) + 1)) {
-		answer = "Correct!"
-	} else {
-    answer = "Wrong!"
-  }
+	if (guess == randomNumber){
+		number = " CORRECT!!! " + " The correct number is " + randomNumber + "."
+	} 
+	//if not says incorrect	
+	else {
+		number = " INCORRECT! " + "  The correct number is " + randomNumber + "."
+	}
 
   // display the results
-  document.getElementById('answer').innerHTML = answer
+  document.getElementById('number').innerHTML = number
 }
